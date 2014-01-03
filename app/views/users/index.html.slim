@@ -1,0 +1,25 @@
+div#homepage_header
+	a = link_to root_path
+		img#homepage_logo src='assets/logo.png'
+
+	div#homepage_login
+		= form_for @user, url: {action: "login"} do |f|
+			table#login_table
+				tr
+					td = f.label 'Email'
+					td = f.label 'Password'
+				tr
+					td = f.text_field :email
+					td = f.password_field :password
+					td = f.button 'Login', { id: 'login_button'}
+				tr
+					td 
+						= f.check_box :gender, { id: 'connected_cb' }
+						a = f.label 'Stay connected', { onclick: 'document.getElementById("connected_cb").click()' }
+					td 
+						a href='lol' = f.label 'Recover password'
+div#homepage_body
+	div.btn.btn-success.btn-large.btn-center
+		img#ratestar.rsleft src="assets/star.png"
+		cunt#homepage_button_text Start Rating
+		img#ratestar.rsright src="assets/star.png"

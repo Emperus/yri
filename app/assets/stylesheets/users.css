@@ -1,0 +1,99 @@
+#homepage_header
+{
+	padding:10px 10px;
+	background-color:#2B509E;
+
+	margin: auto;
+	height:90px;
+}
+
+#homepage_logo
+{
+	margin-top:15px;
+	margin-left:250px;
+}
+
+body
+{
+
+}
+
+#homepage_login
+{
+	float:right;
+	margin-right:250px;
+	margin-top:5px;
+	color:white;
+	font-size:12px;
+}
+
+#homepage_login input[type="text"]
+{
+	width:150px;
+}
+#homepage_login input[type="password"]
+{
+	width:150px;
+}
+
+#login_button
+{
+	border-color: #7B91C0;
+	background-color: #3b5998;
+	color: white;
+}
+#login_table tr td a
+{
+	padding-left:3px;
+}
+
+a
+{
+	text-decoration:none;
+	color:#98a9ca;
+}
+#homepage_body
+{
+	background-image: linear-gradient(white,gray);
+	width:100%;
+	height:80%;
+	position:fixed;
+	letter-spacing: 2px
+}
+#ratestar
+{
+	width: 15px;
+	height: 15px;
+	margin-bottom:4px;
+}
+
+.rsleft
+{
+	margin-right:5px;
+}
+
+.rsright
+{
+	margin-left:5px;
+}
+
+.btn-center
+{
+	display:block;
+	height:200px;
+	width:200px;
+	border-radius:100px;
+	padding-top:85px;
+	z-index:100;
+	margin: 0 auto;
+	margin-top:12.5%;
+}
+#homepage_button_text
+{
+	margin-top:200px;
+}
+.homepage_category
+{
+	
+	z-index:0;
+}
