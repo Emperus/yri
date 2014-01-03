@@ -55,7 +55,7 @@ $(function(){
 		{
 			y+=150
 		}
-		randomtext= $("<img style='width:100px' class ='homepage_category' src='assets/cat_icons/Books.png'/>")
+		randomtext= $("<img style='width:100px' class ='homepage_category' src='assets/cat_icons/"+ratetypes[randomnumbs[i]]+".png'/>")
 		randomtext.css("position","absolute").css("top",y+(Math.random()*120)).css("left",x+(Math.random()*150))
 		randomtext.css("transform","rotate("+((Math.random()*40)-20)+"deg)")
 		$("#homepage_body").append(randomtext)
