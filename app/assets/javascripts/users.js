@@ -11,18 +11,24 @@ ratetypes= [
 ]
 
 $(function(){
-	btnText=$("#homepage_button_text")
+	btnText=$("#animation_center")
 	$(".btn").click(function(){
 		hpcat=$(".homepage_category")
-		rotation = hpcat.css("transform")
+		hpcat.each(function(){
+			$(this).css("top",$(this).offset().top-120)
+			$(this).css("left",$(this).offset().left)
+		});
+		hpcat.css("position","absolute")
 		hpcat.animate({
 			top:btnText.offset().top-100,
-			left:btnText.offset().left},1500,function(){
+			left:btnText.offset().left-hpcat.width()/2,
+			opacity:0},1000,function(){
 				hpcat.remove();
+
 			});
 		var angle = 0;
 		setInterval(function(){
-		      angle+=3;
+		      angle+=6;
 		     hpcat.rotate(angle);
 		},10);
 	})
@@ -36,28 +42,15 @@ $(function(){
 
 		randomnumbs.push(currentnum)
 	}
-	while(randomnumbs.length<6)
+	while(randomnumbs.length<8)
 
-	for (i = 0; i<6; i++)
+	for (i = 0; i<8; i++)
 	{
-		x= 250+(i*366)
-		y=150
-		if(i>=3)
-		{
-			y=300
-			x= 250+((i-3)*366)
-		}
-		if(i==1)
-		{
-			y-=150
-		}
-		if(i==4)
-		{
-			y+=150
-		}
-		randomtext= $("<img style='width:100px' class ='homepage_category' src='assets/cat_icons/"+ratetypes[randomnumbs[i]]+".png'/>")
-		randomtext.css("position","absolute").css("top",y+(Math.random()*120)).css("left",x+(Math.random()*150))
-		randomtext.css("transform","rotate("+((Math.random()*40)-20)+"deg)")
-		$("#homepage_body").append(randomtext)
+		randomtext= $("<img class ='homepage_category' src='assets/cat_icons/"+ratetypes[randomnumbs[i]]+".png'/>")
+		//randomtext.css("transform","rotate("+((Math.random()*40)-20)+"deg)")
+		if(i<4)
+			$($("table.fixmypage tr td")[i]).append(randomtext)
+		else
+			$($("table.fixmypage tr td")[i+1]).append(randomtext)
 	}
 })
